@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from 'react-router-dom';
 import MovieDetails from "../components/movieDetails/";
 import PageTemplate from "../components/templateMoviePage";
-import { getMovie } from '../api/tmdb-api'
+import { getMovie, getMovieAlternativeTitles } from '../api/tmdb-api'
 import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
 
@@ -12,6 +12,10 @@ const MoviePage = (props) => {
     ["movie", { id: id }],
     getMovie
   );
+const { data: alternativeTitles, error: altTitlesError, isLoading: altTitlesIsLoading, isError: altTitlesIsError } = useQuery(
+  ["alternativeTitles", { id: id }],
+  getMovieAlternativeTitles
+);
 
   if (isLoading) {
     return <Spinner />;
@@ -26,7 +30,7 @@ const MoviePage = (props) => {
       {movie ? (
         <>
           <PageTemplate movie={movie}>
-            <MovieDetails movie={movie} />
+            <MovieDetails movie={movie} alternativeTitles={alternativeTitles} />
           </PageTemplate>
         </>
       ) : (

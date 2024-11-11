@@ -116,7 +116,34 @@ export const getMovie = (args) => {
       throw error
    });
   };
+
+  export const getMovieAlternativeTitles = ({ queryKey }) => {
+    const [, idPart] = queryKey;
+    const { id } = idPart;
   
+    const url = `https://api.themoviedb.org/3/movie/${id}/alternative_titles`;
+    const options = {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: `Bearer ${process.env.REACT_APP_TMDB_ACCESS_TOKEN}`,
+      },
+    };
+  
+    return fetch(url, options)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return res.json();
+      })
+      .then((json) => json.titles) 
+      .catch((error) => {
+        console.error('Fetch error:', error);
+        throw error;
+      });
+  };
+
   export const getMovieImages = ({ queryKey }) => {
     const [, idPart] = queryKey;
     const { id } = idPart;
