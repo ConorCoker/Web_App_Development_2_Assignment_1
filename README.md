@@ -27,6 +27,8 @@ Name: Conor Coker
      
      <img src="https://github.com/user-attachments/assets/c5d2a7f1-23a9-4990-b3aa-e9a1e1d18d25" alt="Image of my new Recommendations Drawer" width="400"/>
 
+  2. **Alternative Titles**
+     <img src="https://github.com/user-attachments/assets/bb667c1e-ad44-43ed-8487-7e63b49d682d" alt = "Image of alternative titles displaying on movie detail page" width="400">
 
 + Feature 3
 + etc
