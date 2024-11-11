@@ -21,7 +21,7 @@ const root = {
 };
 const chip = { margin: 0.5 };
 
-const MovieDetails = ({ movie }) => {  // Don't miss this!
+const MovieDetails = ({ movie ,alternativeTitles}) => {  // Don't miss this!
   const [drawerOpen, setDrawerOpen] = useState(false);  
   const [recommendationsDrawerOpen, setRecommendationsDrawerOpen] = useState(false);
   const navigate = useNavigate();
@@ -61,6 +61,19 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
             <Chip label={g.name} sx={{...chip}} />
           </li>
         ))}
+      </Paper>
+      <Paper
+      component="ul"
+      sx={{...root}}
+      >
+        <li>
+          <Chip label = "Alternative Titles" sx={{...chip}} color="primary" />
+        </li>
+        {alternativeTitles && alternativeTitles.map((at) => (
+          <li key={at.iso_3166_1}>
+            <Chip label={at.title} sx={{ ...chip }} />
+            </li>
+          ))}
       </Paper>
       <Paper component="ul" sx={{...root}}>
         <Chip icon={<AccessTimeIcon />} label={`${movie.runtime} min.`} />
