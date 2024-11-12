@@ -28,12 +28,20 @@ Name: Conor Coker
      <img src="https://github.com/user-attachments/assets/c5d2a7f1-23a9-4990-b3aa-e9a1e1d18d25" alt="Image of my new Recommendations Drawer" width="400"/>
 
   2. **Alternative Titles**
+
      <img src="https://github.com/user-attachments/assets/bb667c1e-ad44-43ed-8487-7e63b49d682d" alt = "Image of alternative titles displaying on movie detail page" width="400">
 
-+ Feature 3
-+ etc
-+ etc
+#### Feature 3: Extensive Linking Of Information
+- Adding a **actors page** that contains their **image**, **name**, **gender**, **country**, **movies** and **biography**.
 
+   1. **Actor Page with actor details**
+
+      <img src="https://github.com/user-attachments/assets/6c74a221-df89-4353-9a40-257ad3000536" alt="Image of my new actors page" width="400"/>
+
+   2. **Actor's movies details which when clicked links to movie page**
+  
+      <img src="https://github.com/user-attachments/assets/4917e828-e016-44ec-ada4-b42135aeae09" alt = "Image of movie details on their actors page which links to the movie" width="400">
+      
 ## Setup requirements.
 
 [ Outline any non-standard setup steps necessary to run your app locally after cloning the repo.]

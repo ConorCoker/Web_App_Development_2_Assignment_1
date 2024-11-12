@@ -14,6 +14,51 @@ export const getMovies = () => {
   });
 };
 
+export const getPopularPeople = () => {
+  return fetch(
+    `https://api.themoviedb.org/3/person/popular?api_key=${process.env.REACT_APP_TMDB_KEY}`
+  ).then((response) => {
+    if (!response.ok) {
+      return response.json().then((error) => {
+        throw new Error(error.status_message || "Something went wrong");
+      });
+    }
+    return response.json();
+  })
+  .catch((error) => {
+      throw error
+  });
+};
+
+export const getPersonDetails = ({ queryKey }) => {
+  const [, idPart] = queryKey;
+  const { id } = idPart;  // Extract 'id' from queryKey
+  const url = `https://api.themoviedb.org/3/person/${id}?language=en-US`;
+  
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: `Bearer ${process.env.REACT_APP_TMDB_ACCESS_TOKEN}`,
+    },
+  };
+  
+  return fetch(url, options)
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return res.json();
+    })
+    .then((json) => {
+      return json; // Return the whole response object
+    })
+    .catch((error) => {
+      console.error('Fetch error:', error);
+      throw error;
+    });
+};
+
 export const getUpcoming = () => {
   return fetch(
     `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
