@@ -30,9 +30,38 @@ export const getPopularPeople = () => {
   });
 };
 
+export const getMovieCredits = ({ queryKey }) => {
+  const [, idPart] = queryKey;
+  const { id } = idPart;  
+  const url = `https://api.themoviedb.org/3/movie/${id}/credits`;
+  
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: `Bearer ${process.env.REACT_APP_TMDB_ACCESS_TOKEN}`,
+    },
+  };
+  
+  return fetch(url, options)
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return res.json();
+    })
+    .then((json) => {
+      return json; 
+    })
+    .catch((error) => {
+      console.error('Fetch error:', error);
+      throw error;
+    });
+};
+
 export const getPersonDetails = ({ queryKey }) => {
   const [, idPart] = queryKey;
-  const { id } = idPart;  // Extract 'id' from queryKey
+  const { id } = idPart;  
   const url = `https://api.themoviedb.org/3/person/${id}?language=en-US`;
   
   const options = {
@@ -51,7 +80,7 @@ export const getPersonDetails = ({ queryKey }) => {
       return res.json();
     })
     .then((json) => {
-      return json; // Return the whole response object
+      return json; 
     })
     .catch((error) => {
       console.error('Fetch error:', error);

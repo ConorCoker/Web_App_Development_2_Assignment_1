@@ -41,6 +41,17 @@ Name: Conor Coker
    2. **Actor's movies details which when clicked links to movie page**
   
       <img src="https://github.com/user-attachments/assets/4917e828-e016-44ec-ada4-b42135aeae09" alt = "Image of movie details on their actors page which links to the movie" width="400">
+
+#### Feature 4: Extensive Linking Of Information II
+- Adding links to popular actors on movie details page which when clicked opens a new actor page.  
+
+   1. **Movie detail page with actor details**
+
+      <img src="https://github.com/user-attachments/assets/dd3e26f3-a508-4ee5-b87c-5907f41716c0" alt="Image of my actor details on movie details" width="400"/>
+
+   2. **Actor's movies details which when clicked links to movie page**
+  
+      <img src="https://github.com/user-attachments/assets/929bd6e1-a29d-4966-9d32-04bace2023d9" alt = "Image of the actor details once clicked" width="400">
       
 ## Setup requirements.
 
