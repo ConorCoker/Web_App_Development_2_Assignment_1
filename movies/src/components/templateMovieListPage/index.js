@@ -8,6 +8,8 @@ function MovieListPageTemplate({ movies, title, action }) {
   const [nameFilter, setNameFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("0");
   const genreId = Number(genreFilter);
+  const [ageFilter, setAgeFilter] = useState("-1");
+  const ageBoolean = Number(ageFilter);
 
   let displayedMovies = movies
     .filter((m) => {
@@ -15,11 +17,21 @@ function MovieListPageTemplate({ movies, title, action }) {
     })
     .filter((m) => {
       return genreId > 0 ? m.genre_ids.includes(genreId) : true;
+    })
+    .filter((m) => {
+      if (ageBoolean === -1) {
+        return true;
+      } else if (ageBoolean === 0) {
+        return false;
+      } else if (ageBoolean === 1) {
+        return true;
+      }
     });
 
   const handleChange = (type, value) => {
     if (type === "name") setNameFilter(value);
-    else setGenreFilter(value);
+    else if (type === "genre") setGenreFilter(value);
+    else if (type === "age") setAgeFilter(value);
   };
 
   return (

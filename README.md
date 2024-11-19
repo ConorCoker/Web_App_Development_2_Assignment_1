@@ -61,6 +61,14 @@ Name: Conor Coker
    
    ![React Query DevTools showing cached data](https://github.com/user-attachments/assets/06956ba2-93c5-4ea8-9d4f-c7120f7a3641)
 
+#### **Feature 6: Adding a additonal filter (filter by adult)**
+
+- On the homepage we can now filter by movies where adult = true. This works as intended however it may not of been the best feature to implement as there are not many movies where adult = true on the discover page. 
+
+   1. **New filtering option**
+   
+   ![The new filter by adult option](https://github.com/user-attachments/assets/a86b7dfb-0a77-4e2d-8825-390c80549aa0)
+
 **How It Works:**
 - Unique query keys like `["singular-actor-details", { id: actorId }]` cache the data.
 - Cached data is reused on subsequent visits.

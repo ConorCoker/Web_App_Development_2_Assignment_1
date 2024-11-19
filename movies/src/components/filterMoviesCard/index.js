@@ -10,7 +10,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import img from '../../images/pexels-dziana-hasanbekava-5480827.jpg'
-import { getGenres } from "../../api/tmdb-api";
+import { getGenres, getPopularPeople } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
 
@@ -50,6 +50,10 @@ export default function FilterMoviesCard(props) {
     handleChange(e, "genre", e.target.value);
   };
 
+  const handleAdultChange = (e) => {
+    handleChange(e, "age", e.target.value);
+  };
+
   return (
     <Card 
       sx={{
@@ -86,6 +90,23 @@ export default function FilterMoviesCard(props) {
                 </MenuItem>
               );
             })}
+          </Select>
+        </FormControl>
+        <FormControl sx={{...formControl}}>
+          <InputLabel id="adult-label">Age Rating</InputLabel>
+          <Select
+           labelId="adult-label"
+           id="adult-select"
+           defaultValue="1"
+           value={props.adultFilter}
+           onChange={handleAdultChange}
+     >
+      <MenuItem key={1} value={1}>
+        All
+      </MenuItem>
+      <MenuItem key={0} value={0}>
+        Adult
+      </MenuItem>
           </Select>
         </FormControl>
       </CardContent>
