@@ -73,10 +73,6 @@ Name: Conor Coker
    
    ![The new filter by adult option](https://github.com/user-attachments/assets/a86b7dfb-0a77-4e2d-8825-390c80549aa0)
 
-**How It Works:**
-- Unique query keys like `["singular-actor-details", { id: actorId }]` cache the data.
-- Cached data is reused on subsequent visits.
-      
 ## Setup requirements.
 
 [ Outline any non-standard setup steps necessary to run your app locally after cloning the repo.]
