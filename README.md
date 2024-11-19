@@ -52,6 +52,18 @@ Name: Conor Coker
    2. **Actor's movies details which when clicked links to movie page**
   
       <img src="https://github.com/user-attachments/assets/929bd6e1-a29d-4966-9d32-04bace2023d9" alt = "Image of the actor details once clicked" width="400">
+
+#### **Feature 5: Caching with React Query on all endpoints**
+
+- The app uses **React Query** with the `useQuery` hook to cache API responses.
+
+   1. **React Query DevTools showing cached data**
+   
+   ![React Query DevTools showing cached data](https://github.com/user-attachments/assets/06956ba2-93c5-4ea8-9d4f-c7120f7a3641)
+
+**How It Works:**
+- Unique query keys like `["singular-actor-details", { id: actorId }]` cache the data.
+- Cached data is reused on subsequent visits.
       
 ## Setup requirements.
 
