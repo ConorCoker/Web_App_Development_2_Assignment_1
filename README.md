@@ -83,6 +83,19 @@ Name: Conor Coker
 
    ![The new sorting option](https://github.com/user-attachments/assets/53038c37-ce98-43b8-9448-72af2008d032)
 
+#### **Feature 8: New Styles Applied**
+
+- New styles have been applied to the application using the `createTheme` function from Material-UI.
+
+   1. **Homepage with New Styling**  
+   The homepage has been updated with a fresh theme, providing a more engaging and modern look.
+
+   ![Homepage with new theme](https://github.com/user-attachments/assets/05a9d254-74f9-49af-9e54-e01b6fa0c465)
+
+   2. **Code for Creating the New Theme**  
+   Below is the code that demonstrates how the new theme is applied to the app.
+
+   ![Code showing how I create new theme](https://github.com/user-attachments/assets/05a9d254-74f9-49af-9e54-e01b6fa0c465)
 
 ## Setup requirements.
 
