@@ -73,6 +73,17 @@ Name: Conor Coker
    
    ![The new filter by adult option](https://github.com/user-attachments/assets/a86b7dfb-0a77-4e2d-8825-390c80549aa0)
 
+#### **Feature 7: Adding the Ability to Sort Movies**
+
+- The Movie Database (TMDb) API offers several sorting options for the movie data returned from the Discover Movies query. I have added functionality to allow users to sort movies by all available sorting criteria, including popularity, release date, revenue, and more.
+
+   1. **New Sorting Options**  
+   
+   Users can now choose from various sorting criteria to organize the movie list based on their preferences.
+
+   ![The new sorting option](https://github.com/user-attachments/assets/53038c37-ce98-43b8-9448-72af2008d032)
+
+
 ## Setup requirements.
 
 [ Outline any non-standard setup steps necessary to run your app locally after cloning the repo.]

@@ -13,6 +13,7 @@ import img from '../../images/pexels-dziana-hasanbekava-5480827.jpg'
 import { getGenres, getPopularPeople } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
+import SortByOptions from "../../sortByOptions";
 
 const formControl = 
   {
@@ -54,6 +55,10 @@ export default function FilterMoviesCard(props) {
     handleChange(e, "age", e.target.value);
   };
 
+  const handleSortByChange = (e) => {
+    handleChange(e, "sortby", e.target.value);
+  };
+
   return (
     <Card 
       sx={{
@@ -74,6 +79,24 @@ export default function FilterMoviesCard(props) {
          value={props.titleFilter}
          onChange={handleTextChange}
     />
+<FormControl sx={{ ...formControl }}>
+  <InputLabel id="sortby-label">Sort By</InputLabel>
+  <Select
+    labelId="sortby-label"
+    id="sortby-label"
+    value={props.sortByFilter} 
+    onChange={handleSortByChange}
+  >
+    {Object.keys(SortByOptions).map((key) => {
+      const option = SortByOptions[key];
+      return (
+        <MenuItem key={option.value} value={option.value}>
+          {option.label}
+        </MenuItem>
+      );
+    })}
+  </Select>
+</FormControl>
         <FormControl sx={{...formControl}}>
           <InputLabel id="genre-label">Genre</InputLabel>
           <Select

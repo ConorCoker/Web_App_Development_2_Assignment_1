@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { getMovies } from "../api/tmdb-api";
 import PageTemplate from '../components/templateMovieListPage';
 import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';
 import AddToFavoritesIcon from '../components/cardIcons/addToFavorites'
+import SortByOptions from "../sortByOptions";
 
 const HomePage = (props) => {
 
-  const {  data, error, isLoading, isError }  = useQuery('discover', getMovies)
+  const [sortMoviesBy, setSortMoviesBy] = useState(SortByOptions.PopularityDesc)
+
+  const { data, error, isLoading, isError } = useQuery(
+    ['discover', { sortBy: sortMoviesBy }],
+    getMovies
+  );
+
+  const handleSortByRequest = (newSortBy) => {
+    setSortMoviesBy(newSortBy);
+  }
 
   if (isLoading) {
     return <Spinner />
@@ -30,6 +40,7 @@ const HomePage = (props) => {
       action={(movie) => {
         return <AddToFavoritesIcon movie={movie} />
       }}
+      sortMovies={handleSortByRequest}
     />
 );
 };
