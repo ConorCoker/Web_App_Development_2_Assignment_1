@@ -95,7 +95,16 @@ Name: Conor Coker
    2. **Code for Creating the New Theme**  
    Below is the code that demonstrates how the new theme is applied to the app.
 
-   ![Code showing how I create new theme](https://github.com/user-attachments/assets/05a9d254-74f9-49af-9e54-e01b6fa0c465)
+   ![Code showing how I create new theme](https://github.com/user-attachments/assets/b69f180d-0e3c-456f-be89-d153413303b6)
+
+#### **Feature 9: Watchlist Functionality**
+
+- The app now supports a **Watchlist** feature! Previously, the "Add to Playlist" option on movie cards was non-functional. This feature is now fully implemented, allowing users to save movies to a dedicated **Watchlist** page.
+
+   1. **Watchlist Page with Added Movies**
+   Movies added to the Watchlist are displayed on a new page, making it easy to revisit saved titles.
+
+   ![New watchlist page with movies added](https://github.com/user-attachments/assets/9af07be9-a19f-449e-8fae-6db41ca25df3)
 
 ## Setup requirements.
 
