@@ -106,6 +106,18 @@ Name: Conor Coker
 
    ![New watchlist page with movies added](https://github.com/user-attachments/assets/9af07be9-a19f-449e-8fae-6db41ca25df3)
 
+#### **Feature 10: Responsive UI layout on actors page**
+
+- In the app, I made adjustments to improve the user experience on mobile devices. Specifically, I added more space between the header and the first actor card. This ensures the layout looks better and avoids any overlap issues that occurred previously.
+
+   1. **Before Improvement (Mobile View)**
+
+   ![Before Improvement](https://github.com/user-attachments/assets/ba80354b-4825-487e-b7a3-66c452398530)
+
+   2. **After Improvement (Mobile View)**
+
+   ![After Improvement](https://github.com/user-attachments/assets/2a831c32-7a54-4d1e-bbfc-760637b88d61)
+
 ## Setup requirements.
 
 [ Outline any non-standard setup steps necessary to run your app locally after cloning the repo.]
