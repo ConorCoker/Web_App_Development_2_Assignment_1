@@ -16,6 +16,7 @@ import TopRatedPage from "./pages/topRatedMoviesPage";
 import ActorPage from "./pages/actorPage";
 import IndividualActorPage from "./pages/individualActorPage";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import WatchlistPage from "./pages/watchlist";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -77,6 +78,7 @@ const App = () => {
         <MoviesContextProvider>
           <Routes>
             <Route path="/movies/favorites" element={<FavoriteMoviesPage />} />
+            <Route path="/movies/watchlist" element={<WatchlistPage />} />
             <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
             <Route path="/movies/:id" element={<MoviePage />} />
             <Route path="/" element={<HomePage />} />

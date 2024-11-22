@@ -14,16 +14,9 @@ const AddToPlaylistIcon = ({ movie }) => {
     }
 
   return (
-    <Link
-      to={`/`}
-      state={{
-          movieId: movie.id,
-      }}
-    >
       <IconButton onClick={handleAddToPlaylist}>
       <PlaylistIcon color="primary" fontSize="large" />
       </IconButton>
-    </Link>
   );
 };
 
