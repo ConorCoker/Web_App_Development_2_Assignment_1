@@ -3,8 +3,13 @@ import Header from "../headerMovieList";
 import FilterCard from "../filterMoviesCard";
 import MovieList from "../movieList";
 import Grid from "@mui/material/Grid2";
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import './pagination-styles.css';  // Ensure this path is correct
 
-function MovieListPageTemplate({ movies, title, action, sortMovies }) {
+
+function MovieListPageTemplate({ movies, title, action, sortMovies, changePage, currentPage }) {
   const [nameFilter, setNameFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("0");
   const genreId = Number(genreFilter);
@@ -39,6 +44,10 @@ function MovieListPageTemplate({ movies, title, action, sortMovies }) {
     <Grid container>
       <Grid size={12}>
         <Header title={title} />
+        <Stack spacing={2}>
+      <Typography>Page: {currentPage}</Typography>
+      <Pagination className="custom-pagination" count={500} page={currentPage} onChange={changePage} />
+    </Stack>
       </Grid>
       <Grid container sx={{flex: "1 1 500px"}}>
         <Grid 

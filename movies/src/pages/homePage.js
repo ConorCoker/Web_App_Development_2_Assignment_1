@@ -9,14 +9,19 @@ import SortByOptions from "../sortByOptions";
 const HomePage = (props) => {
 
   const [sortMoviesBy, setSortMoviesBy] = useState(SortByOptions.PopularityDesc)
+  const [currentPage,setPage] = useState(1)
 
   const { data, error, isLoading, isError } = useQuery(
-    ['discover', { sortBy: sortMoviesBy }],
+    ['discover',  {sortBy: sortMoviesBy}, {page: currentPage} ],
     getMovies
   );
 
   const handleSortByRequest = (newSortBy) => {
     setSortMoviesBy(newSortBy);
+  }
+
+  const handlePageChangeRequest = (event, value) => {
+    setPage(value);
   }
 
   if (isLoading) {
@@ -41,6 +46,8 @@ const HomePage = (props) => {
         return <AddToFavoritesIcon movie={movie} />
       }}
       sortMovies={handleSortByRequest}
+      changePage={handlePageChangeRequest}
+      currentPage={currentPage}
     />
 );
 };

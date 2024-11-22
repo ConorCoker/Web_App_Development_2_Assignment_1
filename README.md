@@ -118,6 +118,19 @@ Name: Conor Coker
 
    ![After Improvement](https://github.com/user-attachments/assets/2a831c32-7a54-4d1e-bbfc-760637b88d61)
 
+#### **Feature 11: Pagination**
+
+- To enhance the user experience and performance of the Movie List page, I implemented pagination using the Material UI Pagination component.
+
+- **Implementation Details**:  
+  I used the Material UI Pagination component, which can be found in the official [Material UI Pagination Documentation](https://mui.com/material-ui/react-pagination). This integration enables users to change the page number in the "Discover Movies" query, allowing them to view different sets of movies on the homepage.
+  
+  1. **Image of Home Screen with Pagination**
+
+  Below is an image showing how pagination appears on the homepage, giving users easy access to multiple pages of movies.
+
+  ![Pagination Example](https://github.com/user-attachments/assets/726b8abf-9324-4312-bb7b-6dad9fba7334)
+
 ## Setup requirements.
 
 [ Outline any non-standard setup steps necessary to run your app locally after cloning the repo.]
