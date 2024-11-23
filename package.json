@@ -4,6 +4,7 @@
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.5",
     "@mui/material": "^6.1.5",
+    "firebase": "^11.0.2",
     "react-query": "^3.39.3"
   }
 }

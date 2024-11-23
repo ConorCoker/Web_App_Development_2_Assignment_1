@@ -131,6 +131,18 @@ Name: Conor Coker
 
   ![Pagination Example](https://github.com/user-attachments/assets/726b8abf-9324-4312-bb7b-6dad9fba7334)
 
+#### **Feature 12: Firebase Authentication**
+
+- Firebase Authentication was added for secure user registration and login.
+
+- **Register Page**:  
+  Users can sign up with their email and password and are redirected to the login page upon success.  
+  <img src="https://github.com/user-attachments/assets/acc00d4e-c2bb-4ed1-a4ed-6b63755ee9b2" alt="Register Page" width="300">
+
+- **Login Page**:  
+  Existing users can log in and are redirected to the homepage upon success.  
+  <img src="https://github.com/user-attachments/assets/44a2116e-ab9d-47b1-9801-12dd5a26f867" alt="Login Page" width="300">
+
 ## Setup requirements.
 
 [ Outline any non-standard setup steps necessary to run your app locally after cloning the repo.]
