@@ -2,13 +2,15 @@
 
 Name: Conor Coker
 
-## Overview.
+## Overview
 
-[A brief statement on the content of this repository.]
+This project is a dynamic website that provides detailed information about movies, leveraging the Movie Database (TMDb) API to fetch and display data. 
+
+The website was developed as part of the *Web App Development 2* module. A complete walkthrough of the project is available in this [YouTube video walkthrough](https://youtu.be/mZ3nlmlAmZQ).
 
 ### Features.
 [ A bullet-point list of the __new features__ you added to the Movies Fan app (and any modifications to existing features) .]
- 
+
 #### Feature 1: Additional Static Endpoints from TMDB
 - **Two** additional static endpoints:
 
@@ -143,32 +145,33 @@ Name: Conor Coker
   Existing users can log in and are redirected to the homepage upon success.  
   <img src="https://github.com/user-attachments/assets/44a2116e-ab9d-47b1-9801-12dd5a26f867" alt="Login Page" width="300">
 
-## Setup requirements.
-
-[ Outline any non-standard setup steps necessary to run your app locally after cloning the repo.]
-
 ## API endpoints.
 
-[ List the __additional__ TMDB endpoints used, giving the description and pathname for each one.] 
+The following are the new TMDB API endpoints I have used in my project:
 
-e.g.
-+ Discover list of movies - discover/movie
-+ Movie details - movie/:id
-+ Movie genres = /genre/movie/list
+- **Popular People**: Retrieves a list of popular people in the film industry.  
+  Pathname: `/person/popular`
 
-## Routing.
+- **Movie Credits**: Fetches the cast and crew for a specific movie by ID.  
+  Pathname: `/movie/:id/credits`
 
-[ List the __new routes__ supported by your app and state the associated page.]
+- **Trending Movies**: Retrieves the list of currently trending movies.  
+  Pathname: `/movie/trending`
 
-+ /blogs - displays all published blogs.
-+ /blogs/:id - displays a particular blog.
-+ /blogs/:id/comments - detail view of a particular blog and its comments.
-+ etc.
+- **Recommendations**: Fetches movie recommendations based on a specific movie by ID.  
+  Pathname: `/movie/:id/recommendations`
 
-[If relevant, state what aspects of your app are protected (i.e. require authentication) and what is public.]
+- **Alternative Titles**: Provides alternative titles for a specific movie by ID.  
+  Pathname: `/movie/:id/alternative_titles`
 
-## Independent learning (If relevant).
+## Routing
 
-Itemize the technologies/techniques you researched independently and adopted in your project, 
-i.e. aspects not covered in the lectures/labs. Include the source code filenames that illustrate these 
-(we do not require code excerpts) and provide references to the online resources that helped you (articles/blogs).
+The following are the new routes supported by the app along with its associated page:
+
+- `/register` - Displays the **Register Page**.
+- `/movies/watchlist` - Displays the **Watchlist Page**.
+- `/home` - Displays the **Home Page**.
+- `/movies/trending` - Displays the **Trending Movies Page**.
+- `/movies/toprated` - Displays the **Top Rated Movies Page**.
+- `/actors` - Displays the **Actors Page**.
+- `/actor/:personId` - Displays the **Individual Actor Page**.
